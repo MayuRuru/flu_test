@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'text_styles.dart';
+import '../text_styles.dart';
 
 class Prompt extends StatelessWidget {
 //update constructor to tatget value:
