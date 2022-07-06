@@ -7,7 +7,7 @@ class WorldTime {
   late String time;
   String flag;
   String url;
-  late bool isDaytime;
+  bool isDaytime = true;
 
   WorldTime({required this.location, required this.flag, required this.url});
 
@@ -15,7 +15,7 @@ class WorldTime {
   Future<void> getTime() async {
     try {
       Response response =
-          await get(Uri(path: "http://worldtimeapi.org/api/timezone/$url"));
+          await get(Uri.parse("https://worldtimeapi.org/api/timezone/$url"));
       Map data = jsonDecode(response.body);
 
       String datetime = data['datetime'];

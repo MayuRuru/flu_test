@@ -3,8 +3,6 @@ import 'package:firstflut/WeatherApp/Services/world_time.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatefulWidget {
-  const Loading({Key? key}) : super(key: key);
-
   @override
   State<Loading> createState() => _LoadingState();
 }
@@ -18,11 +16,11 @@ class _LoadingState extends State<Loading> {
 
 //String time = 'Loading...';
 
-// a Function to instanciate a time zone class:
+// a Function to instantiate a time zone class:
 
   void setupWorldTime() async {
     WorldTime instanceTime = WorldTime(
-        location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
+        location: 'Barcelona', flag: 'bcn.png', url: 'Europe/Madrid');
 
     await instanceTime.getTime();
     Navigator.pushReplacementNamed(context, '/home', arguments: {
